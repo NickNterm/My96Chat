@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
+    tools:context=".activities.SignUpActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/grayColor">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/edit_account_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/sign_card_horizontal_margin"
+        android:layout_marginTop="@dimen/sign_card_margin_top"
+        android:backgroundTint="@color/grayColor"
+        app:cardCornerRadius="@dimen/card_view_default_radius">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/edit_account_image_button"
+                android:layout_width="@dimen/sign_up_image_size"
+                android:layout_height="@dimen/sign_up_image_size"
+                android:src="@drawable/ic_baseline_face_24"
+                android:layout_marginTop="@dimen/sign_up_image_margin_up"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="@dimen/sign_up_image_border"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/sign_edit_text_horizontal_margin"
+                android:layout_marginTop="@dimen/sign_edit_text_margin_top">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edit_account_name_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/sign_up_name_text_hint"
+                    android:inputType="text"
+                    android:textSize="@dimen/et_text_size" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/sign_edit_text_horizontal_margin"
+                android:layout_marginTop="@dimen/sign_edit_text_margin_top">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edit_account_phone_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/sign_up_phone_text_hint"
+                    android:inputType="phone"
+                    android:textSize="@dimen/et_text_size" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/edit_account_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sign_edit_text_margin_top"
+                android:layout_marginHorizontal="@dimen/sign_edit_text_horizontal_margin"
+                android:layout_marginBottom="@dimen/sign_button_margin_bottom"
+                android:background="@drawable/rounded_solid_button_background"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="@string/sign_up" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
